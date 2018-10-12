@@ -30,13 +30,14 @@
 
 4.2 批量获取apk信息
 ```python
+# 会在`./日期文件夹`中生成`apk_info_日期.xlsx`，该表会记录目标文件夹apk的信息。
 python3 apk_toolbox -i 目标文件夹
-会在`./日期文件夹`中生成`apk_info_日期.xlsx`，该表会记录目标文件夹apk的信息。
 ```
 
 4.3 批量下载apk
 ```python
-需将下载链接放在一张excel表格中，再运行`python3 apk_toolbox.py -d Excel表格`，下载文件存放在`./日期文件夹/`下
+# 需将下载链接放在一张excel表格中，下载文件存放在`./日期文件夹/`下
+python3 apk_toolbox.py -d Excel表格
 ```
 
 4.4 批量以md5重命名apk
