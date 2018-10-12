@@ -19,14 +19,14 @@
 4.1 查看help
 `python3 apk_toolbox.py -h`
 
-`
+```
 ———————— 使用说明 ————————
   -h, --help:         帮助信息
   -v, --version:      版本号
   -d, --download:     批量爬虫apk
   -r, --rename:       将文件以md5重命名
   -i, --info:         获取apk信息
-`
+```
 
 4.2 批量获取apk信息
 `python3 apk_toolbox -i 目标文件夹`
