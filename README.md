@@ -14,7 +14,7 @@
 - 3.通过hashlib对文件进行摘要，获取md5后用os.rename()重命名。
 
 ## 四.使用说明
-选用了python3，需要导入androguard、openpyxl、request等库才能起飞。
+选用了python3，需要下载androguard、openpyxl、request等库才能起飞。
 
 4.1 查看help
 `python3 apk_toolbox.py -h`
