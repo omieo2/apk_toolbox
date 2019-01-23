@@ -1,20 +1,20 @@
-## 一.项目简介
-逆向分析应用时想快速浏览一批样本的信息，人工逐个统计太费时费力，遂想着写个python脚本进行处理。
+### 一.项目简介
+逆向分析应用时想快速浏览一批样本的信息，手动查询太费时费力，所以写个想写个脚本批量处理应用。
 
-## 二.功能
+### 二.功能点
 - 批量获取apk信息
 - 批量下载apk
 - 批量以md5重命名apk
 
-## 三.实现思路
-- 1.用androguard库获取apk的基本信息（文件md5、签名md5、包名等），再用openpyxl库处理excel文件。
+### 三.实现思路
+- 1.用androguard库获取apk信息（文件md5、签名md5、包名等），再将信息写入一张excel表。
 
-- 2.将待下载的apk链接放到一张excel表中，用openpyxl获取链接，再用request发起网络请求，获取response后判断文件大小，再以二进制写入文件。
+- 2.将下载链接放在excel表的第一列，获取所有链接后进行迭代，通过requests请求获取response，然后判断文件大小(只下载小于100M的应用)，再写入文件。
 
-- 3.通过hashlib对文件进行摘要，获取md5后用os.rename()重命名。
+- 3.通过hashlib对文件进行摘要，以文件MD5进行重命名。
 
-## 四.使用说明
-选用了python3，需要下载androguard、openpyxl、request等库才能起飞。
+### 四.使用说明
+配置好python3，通过命令`pip install -r requirements.txt`安装所需的库。
 
 4.1 查看help
 `python3 apk_toolbox.py -h`
@@ -37,7 +37,7 @@ python3 apk_toolbox -i 目标文件夹
 4.3 批量下载apk
 ```python
 # 需将下载链接放在一张excel表格中，下载文件存放在`./日期文件夹/`下
-python3 apk_toolbox.py -d Excel表格
+python3 apk_toolbox.py -d Excel表格.xlsx
 ```
 
 4.4 批量以md5重命名apk
