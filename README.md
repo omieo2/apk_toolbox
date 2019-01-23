@@ -17,7 +17,7 @@
 配置好python3，通过命令`pip install -r requirements.txt`安装所需的库。
 
 4.1 查看help
-`python3 apk_toolbox.py -h`
+`python3 apk_toolbox_v1.1.py -h`
 
 ```
 ———————— 使用说明 ————————
@@ -29,18 +29,10 @@
 ```
 
 4.2 批量获取apk信息
-```python
-# 会在`./日期文件夹`中生成`apk_info_日期.xlsx`，该表会记录目标文件夹apk的信息。
-python3 apk_toolbox -i 目标文件夹
-```
+将apk放在同一个文件夹下，运行命令`python3 apk_toolbox_v1.1 -i 文件夹`，运行完后查看`当前目录\当天日期\apk_info_日期.xlsx`
 
 4.3 批量下载apk
-```python
-# 需将下载链接放在一张excel表格中，下载文件存放在`./日期文件夹/`下
-python3 apk_toolbox.py -d Excel表格.xlsx
-```
+需将下载链接放在一张excel表格中，工作表命名为'Sheet1'，运行命令`python3 apk_toolbox_v1.1.py -d 文件名.xlsx`，下载完后后查看`当前目录\当天日期\`，存放着应用及一张应用信息表。
 
-4.4 批量以md5重命名apk
-```python
-python3 apk_toolbox.py -r 目标文件夹
-```
+4.4 批量以文件md5重命名apk
+`python3 apk_toolbox_v1.1.py -r 目标文件夹`
