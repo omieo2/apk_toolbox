@@ -29,10 +29,20 @@
 ```
 
 4.2 批量获取apk信息
-将apk放在同一个文件夹下，运行命令`python3 apk_toolbox_v1.1 -i 文件夹`，运行完后查看`当前目录\当天日期\apk_info_日期.xlsx`
+```
+-将apk放在同一个文件夹下
+-执行命令：python3 apk_toolbox_v1.1 -i 文件夹
+-运行完后查看：当前目录\当天日期\apk_info_日期.xlsx
+```
 
 4.3 批量下载apk
-需将下载链接放在一张excel表格中，工作表命名为'Sheet1'，运行命令`python3 apk_toolbox_v1.1.py -d 文件名.xlsx`，下载完后后查看`当前目录\当天日期\`，存放着应用及一张应用信息表。
+```
+-将下载链接放在一张excel表格的第一列
+-执行命令：python3 apk_toolbox_v1.1.py -d 文件名.xlsx
+-下载完后查看：当前目录\当天日期\，存放着应用及应用信息表。
+```
 
 4.4 批量以文件md5重命名apk
-`python3 apk_toolbox_v1.1.py -r 目标文件夹`
+```
+python3 apk_toolbox_v1.1.py -r 目标文件夹
+```
